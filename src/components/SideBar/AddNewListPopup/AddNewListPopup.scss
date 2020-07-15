@@ -1,0 +1,75 @@
+.side-bar-popup {
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  width: 300px;
+  height: 200px;
+
+  background-color: #e8e8e8;
+
+  position: absolute;
+  top: 8%;
+  left: 23%;
+
+  box-shadow: 11px 11px 17px -2px rgba(0,0,0,0.27);
+  border-radius: 5px;
+
+  display: flex;
+
+  padding: 20px 15px;
+
+  transition: visibility 0s, opacity 0.5s linear;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    text-align: center;
+  }
+
+  &__title {
+    color: #fc8d07;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+  }
+
+  &__input {
+    font-size: 25px;
+    border-radius: 2px;
+    padding: 5px 10px;
+
+    width: 100%;
+    margin-bottom: 30px;
+
+    background-color: transparent;
+    border-bottom: #fc8d07 solid 2px;
+
+    color: #403f3b;
+    text-align: center;
+  }
+
+  &__button {
+    &--orange {
+      background-color: #fc8d07;
+      &:hover {
+        background-color: darken(#fc8d07, 10%);
+      }
+    }
+    &--brown {
+      background-color: #403f3b;
+      margin-right: 30px;
+      &:hover {
+        background-color: darken(#403f3b, 10%);
+      }
+    }
+  }
+
+}

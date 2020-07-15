@@ -1,0 +1,94 @@
+.lists {
+
+  max-height: 668px;
+
+  //Hide scroll bar, but while still being able to scroll
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    width: 170px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    color: #efeeec;
+    font-size: 25px;
+
+    padding: 4px 0 5px 10px;
+    border-bottom: #63625e solid 2px;
+
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: #efeeec;
+    transition: color 0.15s linear;
+
+    &:after {
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+
+      position: absolute;
+      content: '';
+
+      height: 100%;
+      width: 5px;
+      background-color: #fc8d07;
+
+      left: 0;
+      top: 0;
+
+    }
+
+    &.active {
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      color: #fc8d07;
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    border-bottom: #63625e 1px solid;
+
+    font-size: 25px;
+    color: #efeeec;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  &__icons {
+    padding-top: 5px;
+
+    ion-icon {
+      margin-left: 3px;
+
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #fc8d07;
+      }
+    }
+  }
+}

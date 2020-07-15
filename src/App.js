@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {connect} from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {appInit} from "./redux/app-reducer";
+import SideBarContainer from "./components/SideBar/SideBarContainer";
+import TaskBarContainer from "./components/TaskBar/TaskBarContainer";
+import Preloader from "./components/Preloader/Preloader";
+import NoteBarContainer from "./components/NoteBar/NoteBarContainer";
+
+
+
+class App extends Component {
+
+    componentDidMount() {
+        this.props.appInit()
+    }
+
+    render() {
+        if (!this.props.initialized) {
+            return <div className="todo">
+                <Preloader/>
+            </div>
+        }
+        return (
+            <main>
+                <div className="todo">
+                    <SideBarContainer/>
+                    <TaskBarContainer/>
+                    <NoteBarContainer/>
+                </div>
+            </main>
+
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+});
+
+export default connect(mapStateToProps, {appInit})(App);
+
+

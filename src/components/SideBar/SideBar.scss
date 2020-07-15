@@ -1,0 +1,51 @@
+.side-bar {
+  height: 100%;
+  width: 25%;
+
+  padding: 50px 30px;
+
+  background-color: #403f3b;
+
+  &__list-name {
+    overflow: hidden;
+    &.scratched {
+      text-decoration: line-through;
+    }
+  }
+
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    border-bottom: #fc8d07 solid 2px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+
+    position: relative;
+
+    ion-icon {
+      position: absolute;
+      left: 88%;
+      top: -10%;
+
+      color: #efeeec;
+      font-size: 32px;
+
+      cursor: pointer;
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: #fc8d07;
+      }
+
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    color: #fc8d07;
+    text-transform: uppercase;
+  }
+}

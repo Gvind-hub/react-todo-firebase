@@ -1,0 +1,156 @@
+.note-bar {
+  width: 35%;
+
+  &__content {
+    padding: 50px 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__task {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__task-name {
+    font-weight: 500;
+    font-size: 35px;
+    color: #403f3b;
+
+    margin-left: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+
+    border-bottom: #74abbf solid 2px;
+  }
+
+  &__add-button-block {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__text-block {
+    visibility: hidden;
+    opacity: 0;
+
+    position: relative;
+
+    transition: visibility 0s, opacity 0.5s linear;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__note-info {
+    font-size: 20px;
+
+    position: absolute;
+    top: -17%;
+    left: 75%;
+  }
+
+  &__notes-text {
+    padding: 5px 5px 10px 5px;
+    resize: none;
+    overflow: auto;
+
+    margin-bottom: 30px;
+
+    font-size: 25px;
+    color: #403f3b;
+
+    word-break: break-word;
+
+    width: 100%;
+
+    border: #403f3b 1px solid;
+
+    //Hide scroll bar, but while still being able to scroll
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+    }
+
+  }
+
+  ion-icon {
+    cursor: pointer;
+
+    margin-left: 10px;
+
+    font-size: 44px;
+    color: #403f3b;
+  }
+
+  &__buttons {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__button {
+    &--brown {
+      background-color: #403f3b;
+      margin-right: 30px;
+      &:hover {
+        background-color: darken(#403f3b, 10%);
+      }
+    }
+    &--orange {
+      background-color: #fc8d07;
+
+      &:hover {
+        background-color: darken(#fc8d07, 10%);
+      }
+    }
+  }
+}
+
+
+.note {
+  width: 100%;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    max-height: 210px;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__element {
+    padding: 10px 5px;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+    border-bottom: #403f3b solid 1px;
+
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.25);
+    }
+    &.active {
+      box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
