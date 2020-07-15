@@ -6,13 +6,6 @@
 
   background-color: #403f3b;
 
-  &__list-name {
-    overflow: hidden;
-    &.scratched {
-      text-decoration: line-through;
-    }
-  }
-
   &__title-block {
     display: flex;
     justify-content: space-between;

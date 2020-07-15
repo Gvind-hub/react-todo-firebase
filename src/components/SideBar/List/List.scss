@@ -32,6 +32,13 @@
     cursor: pointer;
   }
 
+  &__list-name {
+    overflow: hidden;
+    &.scratched {
+      text-decoration: line-through;
+    }
+  }
+
   &__link {
     color: #efeeec;
     transition: color 0.15s linear;
