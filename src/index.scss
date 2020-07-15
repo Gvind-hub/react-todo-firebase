@@ -55,3 +55,49 @@
 
   border-bottom: #fc8d07 solid 2px;
 }
+
+.checkbox {
+
+  input {
+    display: none;
+  }
+
+  svg {
+    width: 33px;
+    height: 24px;
+    transition: opacity 0.15s ease-in-out;
+
+    path {
+      stroke: #fc8d07;
+    }
+  }
+
+  input:checked + label { // + right neighbour // ~ left neighbour
+
+    svg {
+
+      opacity: 1;
+
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center; //vert alignment
+    justify-content: center; //horizontal alignment
+
+    cursor: pointer;
+
+    border: 2px solid #999999;
+
+    width: 25px;
+    height: 25px;
+
+    svg {
+      position: relative;
+      left: 1px;
+
+      opacity: 0;
+    }
+  }
+}

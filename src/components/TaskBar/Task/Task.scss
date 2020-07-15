@@ -1,0 +1,78 @@
+.task {
+  $self: &;
+
+  padding-top: 10px;
+  max-height: 650px;
+
+  //Hide scroll bar, but while still being able to scroll
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  &__element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: #999999 2px solid;
+    padding: 0 0 15px 0;
+    margin-bottom: 20px;
+
+    position: relative;
+
+  }
+
+  &__link {
+    position: absolute;
+    left: 40px;
+    top: -10px;
+
+    width: 83%;
+    height: 85%;
+
+    //hiding overflow text
+    text-overflow: ellipsis; //обрезает
+    overflow: hidden; // прячет лишнее
+    white-space: nowrap; //нет перехода на след. строчку
+
+    &:hover{
+      #{$self}__name {
+        border-bottom: #403f3b 2px solid;
+      }
+    }
+    &.active{
+      #{$self}__name {
+        color: #fc8d07;
+      }
+    }
+
+  }
+
+  &__name {
+
+    cursor: pointer;
+
+    font-size: 25px;
+    color: #403f3b;
+
+    border-bottom: transparent 2px solid;
+
+    transition: all 0.3s linear;
+  }
+
+  ion-icon {
+    cursor: pointer;
+    font-size: 30px;
+  }
+}
+
+
+
