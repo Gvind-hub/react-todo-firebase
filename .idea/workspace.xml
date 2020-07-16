@@ -4,8 +4,7 @@
     <list default="true" id="f11eeea7-7ba3-4371-ac4e-ae2870dbad8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/List/List.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar/SideBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593963982665</updated>
-      <workItem from="1593963983865" duration="175241000" />
+      <workItem from="1593963983865" duration="176287000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1594834143761</created>
@@ -86,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594836717420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added scratch out style for list element">
+      <created>1594837349641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594837349641</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +113,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="components have been refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="components have been refactored" />
+    <MESSAGE value="added scratch out style for list element" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scratch out style for list element" />
   </component>
 </project>
