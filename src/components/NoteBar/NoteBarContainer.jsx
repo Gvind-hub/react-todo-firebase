@@ -21,20 +21,20 @@ const NoteBarContainer = ({lists, activeId, onAddTaskNotes, onDeleteTaskNote, ed
     const [noteIndex, setNoteIndex] = useState('');
     let history = useHistory();
 
+    let taskIndex = history.location.pathname.split('/')[2];
+    let list = lists.find(list => list.id === activeId);
+    let task;
+    if (list && list.tasks && taskIndex) (task = list.tasks[taskIndex]);
+
     useEffect(() => {
         task && task.text && setTaskName(task.text)
-    }, []);
+    },[task]);
 
     useEffect(() => {
         setNoteText('');
         setNoteIndex('');
         task && task.text && setTaskName(task.text)
     }, [history.location.pathname]);
-
-    let taskIndex = history.location.pathname.split('/')[2];
-    let list = lists.find(list => list.id === activeId);
-    let task;
-    if (list && list.tasks && taskIndex) (task = list.tasks[taskIndex]);
 
     return <NoteBar noteIndex={noteIndex} onAddTaskNotes={onAddTaskNotes} onDeleteTaskNote={onDeleteTaskNote} setNoteIndex={setNoteIndex} taskName={taskName} setTaskName={setTaskName} onChangeTaskName={onChangeTaskName} noteText={noteText} setNoteText={setNoteText}
                     toggleTaskCompleted={toggleTaskCompleted} list={list} task={task}

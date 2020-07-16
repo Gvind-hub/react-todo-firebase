@@ -40,7 +40,6 @@ const listsReducer = (state = initialState, action) => {
             } else {
                 return {...state, lists: [newList]};
             }
-
         }
         case IS_ACTIVE: {
             return {...state, activeId: action.activeId};
@@ -89,9 +88,8 @@ const listsReducer = (state = initialState, action) => {
         }
         case ADD_TASK: {
             const newTask = {text: action.text, completed: false};
-            if (state.lists[Number(action.id) - 1].tasks) {
+            if (state.lists[Number(action.id) - 1] && state.lists[Number(action.id) - 1].tasks) {
                 return {
-
                     ...state,
                     lists: updateObjectInArray(state.lists, action.id, 'id', {
                         tasks: [...state.lists[Number(action.id) - 1].tasks, newTask]
@@ -99,7 +97,6 @@ const listsReducer = (state = initialState, action) => {
                 }
             } else {
                 return {
-
                     ...state,
                     lists: updateObjectInArray(state.lists, action.id, 'id', {
                         tasks: [newTask]
@@ -136,7 +133,7 @@ const listsReducer = (state = initialState, action) => {
             }
         }
         case ADD_TASK_NOTES: {
-            if (state.lists[Number(action.id) - 1].tasks[action.index].notes) {
+            if (state.lists[Number(action.id) - 1].tasks[action.index] && state.lists[Number(action.id) - 1].tasks[action.index].notes) {
                 return {
                     ...state,
                     lists: updateObjectInArray(state.lists, action.id, 'id', {

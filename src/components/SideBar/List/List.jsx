@@ -12,7 +12,7 @@ const List = ({lists, editListName, onChangeListName, setEditModeOn, onClickDele
                 <li className="lists__list" key={list.id} >
                     <NavLink to={`/${list.id}`} className="lists__link">
                         <div className="lists__info">
-                            {!list.editMode && <div className={cn("lists__list-name", {"scratched" : list.tasks && list.tasks.length === list.tasks.filter(task => task.completed).length})}>{list.name}</div>}
+                            {!list.editMode && <div className={cn("lists__list-name", {"scratched" : list.tasks && list.tasks.length > 0 && list.tasks.length === list.tasks.filter(task => task.completed).length})}>{list.name}</div>}
                             {list.editMode && <input type="text" className="lists__input" minLength="1" maxLength="20"
                                                      value={list.name} onChange={e => editListName(list.id, e.target.value)}
                                                      onBlur={() => list.name && onChangeListName(list.id, list.name)} onKeyDown={e => e.key === 'Enter' && list.name && onChangeListName(list.id, list.name)}/>}
